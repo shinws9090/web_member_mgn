@@ -16,9 +16,7 @@ public class LogoutProcess extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		request.getSession().invalidate();
-		 response.setHeader("Cache-Control","no-cache");
-		 response.setHeader("Pragma","no-cache");
-		 response.setDateHeader("Expires",0);
+		
 		response.sendRedirect("loginForm.jsp");
 	}
 

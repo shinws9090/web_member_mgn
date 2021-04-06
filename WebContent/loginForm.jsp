@@ -14,13 +14,13 @@
 			<legend>로그인 페이지</legend>
 			<ul>
 				<li>
-					<label for="userId">아이디</label>
-					<input type="text" name="id" size="20" id="userId">
+					<label for="id">아이디</label>
+					<input type="text" name="id" size="20" id="id">
 				</li>
 			
 				<li>
-					<label for="pwd">비밀번호</label>
-					<input type="password" name="pass" size="20" required id="pwd">
+					<label for="pass">비밀번호</label>
+					<input type="password" name="pass" size="20" required id="pass">
 				</li>
 				<li>
 				<a href="javascript:loginform.submit()">로그인</a>

@@ -34,14 +34,14 @@ public class Joinprocess extends HttpServlet {
 		int res = service.addMember(member);
 		Member m = (Member) request.getSession().getAttribute("member");
 		
-		if (m.getId().equals("admin")) {
-			request.getRequestDispatcher("memberList").forward(request, response);
-		} else {
+		if (m==null) {
 			if (res == 1) {
 				request.getRequestDispatcher("loginForm.jsp").forward(request, response);
 			} else {
 				request.getRequestDispatcher("joinForm.jsp").forward(request, response);
 			}
+		} else if (m.getId().equals("admin")){
+			request.getRequestDispatcher("memberList").forward(request, response);
 		}
 	}
 
